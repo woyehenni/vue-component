@@ -1,8 +1,22 @@
 {
   "name": "vue-component",
-  "version": "0.0.0",
-  "private": true,
   "type": "module",
+  "version": "1.0.0",
+  "packageManager": "pnpm@9.12.2",
+  "description": "component based on vue3.x",
+  "author": "woyehenni",
+  "license": "MIT",
+  "homepage": "https://github.com/woyehenni/vue-component#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woyehenni/vue-component.git"
+  },
+  "bugs": "https://github.com/woyehenni/vue-component/issues",
+  "keywords": [
+    "vue3",
+    "component",
+    "vite"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
