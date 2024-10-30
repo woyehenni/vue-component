@@ -36,7 +36,8 @@
     ]
   },
   "scripts": {
-    "dev": "pnpm run --filter ./playground dev",
+    "dev": "pnpm run --filter playground dev",
+    "docs": "pnpm run --filter docs dev",
     "build": "run-p declaration \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
