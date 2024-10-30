@@ -31,7 +31,7 @@
     "src/**/*.{js,jsx,ts,tsx,vue}": [
       "eslint . --fix"
     ],
-    "src/src/**/*.{css,scss}": [
+    "src/**/*.{css,scss}": [
       "stylelint --fix \"src/**/*.{css,scss}\""
     ]
   },
