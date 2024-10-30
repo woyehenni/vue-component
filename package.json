@@ -17,15 +17,46 @@
     "component",
     "vite"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.umd.js",
+      "import": "./dist/index.es.js"
+    },
+    "./*": "./*"
+  },
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "style": "./dist/style.css",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,vue}": [
+      "eslint . --fix"
+    ],
+    "src/src/**/*.{css,scss}": [
+      "stylelint --fix \"src/**/*.{css,scss}\""
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
-    "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "type-check": "vue-tsc",
+    "lint:script": "eslint . --fix",
+    "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
+    "lint-staged": "lint-staged",
+    "format": "prettier --write src/",
+    "prepare": "husky"
   },
   "dependencies": {
     "vue": "^3.5.12"
@@ -43,9 +74,17 @@
     "@vue/tsconfig": "^0.5.1",
     "eslint": "^9.13.0",
     "eslint-plugin-vue": "^9.29.0",
+    "husky": "^9.1.6",
     "jsdom": "^25.0.1",
+    "lint-staged": "^15.2.10",
     "npm-run-all2": "^7.0.1",
     "prettier": "^3.3.3",
+    "sass-embedded": "^1.80.4",
+    "stylelint": "^16.10.0",
+    "stylelint-config-recess-order": "^5.1.1",
+    "stylelint-config-recommended-scss": "^14.1.0",
+    "stylelint-config-standard": "^36.0.1",
+    "stylelint-prettier": "^5.0.2",
     "typescript": "~5.6.0",
     "vite": "^5.4.10",
     "vitest": "^2.1.3",

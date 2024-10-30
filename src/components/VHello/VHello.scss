@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+.v-hello {
+  color: $hello-text-color;
+  font-size: $hello-font-size;
+}
