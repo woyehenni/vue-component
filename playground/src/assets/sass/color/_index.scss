@@ -1,0 +1,31 @@
+$color-primary: #009f64; //りそな
+// $color-primary: #004ea2;  //足利
+// $color-primary: #01458e;  //常陽
+// $color-primary: #ae001b;  //114
+// $color-primary: #ce8000;  //16
+$color-success: #19b676;
+$color-error: #ea5b55;
+$color-warning: #fdbb30;
+
+@mixin theme-default {
+  --color-primary-background: #{$color-primary};
+  --color-primary: #{$color-primary};
+}
+@mixin theme-dark {
+  --color-primary-background: #{$color-primary};
+  --color-primary: #{$color-primary};
+}
+
+:root {
+  @include theme-default;
+  @media (prefers-color-scheme: dark) {
+    @include theme-dark;
+  }
+  &.theme-default {
+    @include theme-default;
+  }
+
+  &.theme-dark {
+    @include theme-dark;
+  }
+}

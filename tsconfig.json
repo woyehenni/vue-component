@@ -33,7 +33,8 @@
   "exclude": [
     "dist",
     "node_modules",
-    "example"
+    "playground",
+    "docs",
   ],
   "include": [
     "src/**/*.ts",

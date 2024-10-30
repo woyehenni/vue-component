@@ -1,0 +1,23 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5000 --host"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@iconify/vue": "^4.1.2",
+    "vue-component": "workspace:*",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.23",
+    "vue-router": "^4.4.5"
+  }
+}

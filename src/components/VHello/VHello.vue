@@ -1,6 +1,6 @@
 <template>
-  <div class="v-hello">
-    Hello, this is <mark>{{ name }}</mark>
+  <div>
+    Hello, this is <mark class="v-hello">{{ name }}</mark>
   </div>
 </template>
 <script setup lang="ts">

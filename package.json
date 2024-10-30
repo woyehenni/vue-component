@@ -1,11 +1,9 @@
 {
   "name": "vue-component",
-  "type": "module",
+  "description": "A UI Library for Modern Web Apps, powered by Vue",
   "version": "1.0.0",
   "packageManager": "pnpm@9.12.2",
-  "description": "component based on vue3.x",
   "author": "woyehenni",
-  "license": "MIT",
   "homepage": "https://github.com/woyehenni/vue-component#readme",
   "repository": {
     "type": "git",
@@ -17,22 +15,14 @@
     "component",
     "vite"
   ],
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.umd.js",
-      "import": "./dist/index.es.js"
-    },
-    "./*": "./*"
-  },
-  "main": "./dist/index.umd.js",
+  "type": "module",
+  "license": "MIT",
   "module": "./dist/index.es.js",
-  "style": "./dist/style.css",
+  "style": "./dist/index.css",
   "sideEffects": [
     "**/*.css"
   ],
   "types": "./dist/index.d.ts",
-  "typings": "./dist/index.d.ts",
   "files": [
     "dist",
     "package.json"
@@ -46,12 +36,13 @@
     ]
   },
   "scripts": {
-    "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "dev": "pnpm run --filter ./playground dev",
+    "build": "run-p declaration \"build-only {@}\" --",
     "preview": "vite preview",
     "test:unit": "vitest",
     "build-only": "vite build",
-    "type-check": "vue-tsc",
+    "declaration": "vue-tsc",
+    "type-check": "vue-tsc --noEmit",
     "lint:script": "eslint . --fix",
     "lint:style": "stylelint --fix \"src/**/*.{css,scss}\"",
     "lint-staged": "lint-staged",

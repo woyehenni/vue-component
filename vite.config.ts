@@ -9,15 +9,15 @@ import pkg from './package.json'
 export default defineConfig({
   plugins: [
     vue(),
-    vueJsx()
-    // {
-    //   name: 'style',
-    //   renderChunk(code) {
-    //     return {
-    //       code: code.replace(/\.scss.mjs/g, '.css')
-    //     }
-    //   }
-    // }
+    vueJsx(),
+    {
+      name: 'style',
+      renderChunk(code) {
+        return {
+          code: code.replace(/\.scss.es.js/g, '.css')
+        }
+      }
+    }
   ],
   resolve: {
     alias: {
@@ -43,8 +43,8 @@ export default defineConfig({
       }
     },
     cssMinify: false,
-    cssCodeSplit: true
-    // emptyOutDir: false
+    cssCodeSplit: true,
+    emptyOutDir: true
   },
   css: {
     preprocessorOptions: {
